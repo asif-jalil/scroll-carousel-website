@@ -494,24 +494,6 @@ pre {
 .right-2{
   right: 0.5rem;
 }
-.left-0{
-  left: 0px;
-}
-.right-0{
-  right: 0px;
-}
-.bottom-0{
-  bottom: 0px;
-}
-.-bottom-20{
-  bottom: -5rem;
-}
-.-bottom-40{
-  bottom: -10rem;
-}
-.bottom-40{
-  bottom: 10rem;
-}
 .z-10{
   z-index: 10;
 }
@@ -613,12 +595,6 @@ pre {
 .h-7{
   height: 1.75rem;
 }
-.h-3{
-  height: 0.75rem;
-}
-.h-4{
-  height: 1rem;
-}
 .min-h-0{
   min-height: 0px;
 }
@@ -648,15 +624,6 @@ pre {
 }
 .w-7{
   width: 1.75rem;
-}
-.w-3{
-  width: 0.75rem;
-}
-.w-4{
-  width: 1rem;
-}
-.w-72{
-  width: 18rem;
 }
 .max-w-7xl{
   max-width: 80rem;
@@ -1029,13 +996,9 @@ pre {
   --tw-text-opacity: 1;
   color: rgba(51, 65, 85, var(--tw-text-opacity));
 }
-.text-gray-500{
+.text-gray-600{
   --tw-text-opacity: 1;
-  color: rgba(107, 114, 128, var(--tw-text-opacity));
-}
-.text-slate-400{
-  --tw-text-opacity: 1;
-  color: rgba(148, 163, 184, var(--tw-text-opacity));
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 .text-blue-500{
   --tw-text-opacity: 1;
@@ -1065,21 +1028,11 @@ pre {
   --tw-text-opacity: 1;
   color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
-.text-gray-600{
-  --tw-text-opacity: 1;
-  color: rgba(75, 85, 99, var(--tw-text-opacity));
-}
 .opacity-50{
   opacity: 0.5;
 }
 .opacity-80{
   opacity: 0.8;
-}
-.opacity-70{
-  opacity: 0.7;
-}
-.opacity-60{
-  opacity: 0.6;
 }
 .backdrop-blur{
   --tw-backdrop-blur: blur(8px);
@@ -1127,10 +1080,6 @@ pre {
   visibility: visible;
   opacity: 1;
 }
-.hover\:text-slate-500:hover{
-  --tw-text-opacity: 1;
-  color: rgba(100, 116, 139, var(--tw-text-opacity));
-}
 .hover\:text-indigo-500:hover{
   --tw-text-opacity: 1;
   color: rgba(99, 102, 241, var(--tw-text-opacity));
@@ -1142,17 +1091,8 @@ pre {
 .hover\:underline:hover{
   text-decoration-line: underline;
 }
-.hover\:opacity-70:hover{
-  opacity: 0.7;
-}
-.hover\:opacity-10:hover{
-  opacity: 0.1;
-}
 .hover\:opacity-100:hover{
   opacity: 1;
-}
-.hover\:opacity-80:hover{
-  opacity: 0.8;
 }
 @media (min-width: 640px){
   .sm\:col-span-2{
@@ -1166,9 +1106,6 @@ pre {
   }
   .sm\:grid{
     display: grid;
-  }
-  .sm\:w-96{
-    width: 24rem;
   }
   .sm\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
