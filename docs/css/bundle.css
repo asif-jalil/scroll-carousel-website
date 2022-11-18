@@ -494,11 +494,32 @@ pre {
 .right-2{
   right: 0.5rem;
 }
+.left-0{
+  left: 0px;
+}
+.right-0{
+  right: 0px;
+}
+.bottom-0{
+  bottom: 0px;
+}
+.-bottom-20{
+  bottom: -5rem;
+}
+.-bottom-40{
+  bottom: -10rem;
+}
+.bottom-40{
+  bottom: 10rem;
+}
 .z-10{
   z-index: 10;
 }
 .z-40{
   z-index: 40;
+}
+.z-20{
+  z-index: 20;
 }
 .order-first{
   order: -9999;
@@ -574,11 +595,11 @@ pre {
 .hidden{
   display: none;
 }
-.h-12{
-  height: 3rem;
-}
 .h-6{
   height: 1.5rem;
+}
+.h-12{
+  height: 3rem;
 }
 .h-14{
   height: 3.5rem;
@@ -592,11 +613,17 @@ pre {
 .h-7{
   height: 1.75rem;
 }
+.h-3{
+  height: 0.75rem;
+}
+.h-4{
+  height: 1rem;
+}
 .min-h-0{
   min-height: 0px;
 }
-.w-12{
-  width: 3rem;
+.w-6{
+  width: 1.5rem;
 }
 .w-0\.5{
   width: 0.125rem;
@@ -604,11 +631,11 @@ pre {
 .w-0{
   width: 0px;
 }
-.w-6{
-  width: 1.5rem;
-}
 .w-96{
   width: 24rem;
+}
+.w-12{
+  width: 3rem;
 }
 .w-14{
   width: 3.5rem;
@@ -621,6 +648,15 @@ pre {
 }
 .w-7{
   width: 1.75rem;
+}
+.w-3{
+  width: 0.75rem;
+}
+.w-4{
+  width: 1rem;
+}
+.w-72{
+  width: 18rem;
 }
 .max-w-7xl{
   max-width: 80rem;
@@ -639,10 +675,6 @@ pre {
 }
 .flex-shrink-0{
   flex-shrink: 0;
-}
-.translate-y-4{
-  --tw-translate-y: 1rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .flex-col{
   flex-direction: column;
@@ -1033,21 +1065,26 @@ pre {
   --tw-text-opacity: 1;
   color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
+.text-gray-600{
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
 .opacity-50{
   opacity: 0.5;
 }
-.opacity-40{
-  opacity: 0.4;
+.opacity-80{
+  opacity: 0.8;
+}
+.opacity-70{
+  opacity: 0.7;
+}
+.opacity-60{
+  opacity: 0.6;
 }
 .backdrop-blur{
   --tw-backdrop-blur: blur(8px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-.header__bg {
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* Tooltip text */
@@ -1105,6 +1142,18 @@ pre {
 .hover\:underline:hover{
   text-decoration-line: underline;
 }
+.hover\:opacity-70:hover{
+  opacity: 0.7;
+}
+.hover\:opacity-10:hover{
+  opacity: 0.1;
+}
+.hover\:opacity-100:hover{
+  opacity: 1;
+}
+.hover\:opacity-80:hover{
+  opacity: 0.8;
+}
 @media (min-width: 640px){
   .sm\:col-span-2{
     grid-column: span 2 / span 2;
@@ -1117,6 +1166,9 @@ pre {
   }
   .sm\:grid{
     display: grid;
+  }
+  .sm\:w-96{
+    width: 24rem;
   }
   .sm\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1132,6 +1184,9 @@ pre {
 @media (min-width: 768px){
   .md\:col-span-1{
     grid-column: span 1 / span 1;
+  }
+  .md\:block{
+    display: block;
   }
   .md\:grid{
     display: grid;
