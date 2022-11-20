@@ -10,7 +10,7 @@
     "start:watch": "webpack --watch --config webpack.config.js",
     "build:debug": "webpack --config webpack.config.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "docs:live": "gh-pages -d docs"
+    "live": "gh-pages -d docs"
   },
   "keywords": [
     "scroll",
