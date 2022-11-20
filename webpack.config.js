@@ -1,64 +1,56 @@
-const webpack = require('webpack');
 const path = require('path');
 const os = require('os');
+var glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const pkg = require('./package.json');
 
-const { name, version, homepage } = pkg;
+const htmlFilesPaths = glob.sync('./src/**/*.html');
 const isProd = process.env.NODE_ENV === 'production';
-
-const banner = `
-${name} - ${version}
-Responsive scroll slider
-
-${homepage}
-`;
 
 module.exports = {
   mode: isProd ? 'production' : 'development',
   target: ['web', 'es5'],
   entry: {
-    'scroll.carousel': './src/js/scroll.carousel.js'
+    bundle: ['./src/js/index.js', './src/css/style.css']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: isProd ? '[name].min.js' : '[name].js',
-    publicPath: '/dist',
-    library: {
-      name: 'ScrollCarousel',
-      type: 'umd',
-      export: 'default',
-      umdNamedDefine: true
-    },
-    globalObject: 'this'
+    filename: `./js/[name]${isProd ? '.min' : ''}.js`,
+    clean: true
   },
   plugins: [
-    new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
-      filename: isProd ? '[name].min.css' : '[name].css'
+      filename: `./css/[name]${isProd ? '.min' : ''}.css`
     }),
-    new webpack.BannerPlugin({ banner })
+    ...htmlFilesPaths.map(file => {
+      return new HtmlWebpackPlugin({
+        template: file,
+        inject: 'body',
+        filename: file.split('/').slice(2).join('/')
+      });
+    }),
+    new CopyPlugin({
+      patterns: [{ from: 'src/assets', to: 'assets' }]
+    })
   ],
   module: {
     rules: [
       {
-        test: /(\.js)$/,
-        exclude: /(node_modules)/,
+        test: /\.js$/i,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {
-            cacheDirectory: true,
-            presets: ['@babel/preset-env'],
-            plugins: ['babel-plugin-add-module-exports']
+            presets: ['@babel/preset-env']
           }
         }
       },
       {
-        test: /\.s[ac]ss$/i,
-        exclude: /(node_modules)/,
+        test: /\.css$/i,
+        include: path.resolve(__dirname, 'src'),
         use: [
           // Extract CSS
           MiniCssExtractPlugin.loader,
@@ -66,15 +58,23 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: isProd,
+              sourceMap: true,
               url: false
             }
           },
-          // Compiles Sass to CSS
           {
-            loader: 'sass-loader',
+            loader: 'postcss-loader',
             options: {
-              sourceMap: !isProd
+              postcssOptions: {
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      // Options
+                    }
+                  ]
+                ]
+              }
             }
           }
         ]
@@ -108,10 +108,10 @@ module.exports = {
       })
     ]
   },
-  devtool: !isProd ? false : 'source-map',
+  devtool: 'source-map',
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'example')
+      directory: path.resolve(__dirname, 'dist')
     },
     watchFiles: ['./src/**/*'],
     open: true,

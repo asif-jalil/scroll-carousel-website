@@ -2,20 +2,14 @@
   "name": "scroll-carousel",
   "version": "0.5.0",
   "description": "Scroll carousel, a unique content slider that specially works on window scroll.",
-  "main": "dist/scroll.carousel.js",
-  "types": "src/js/scroll.carousel.d.ts",
-  "style": "dist/scroll.carousel.css",
+  "main": "dist/js/bundle.min.js",
+  "style": "dist/css/bundle.min.css",
   "scripts": {
     "start": "npm run start:watch & npm run start:serve",
     "start:serve": "webpack serve --config webpack.config.js",
     "start:watch": "webpack --watch --config webpack.config.js",
     "build:debug": "webpack --config webpack.config.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "docs": "npm run docs:watch & npm run docs:serve",
-    "docs:serve": "webpack serve --config webpack.docs.js",
-    "docs:watch": "webpack --watch --config webpack.docs.js",
-    "docs:build:debug": "webpack --config webpack.docs.js",
-    "docs:build:prod": "cross-env NODE_ENV=production webpack --config webpack.docs.js",
     "docs:live": "gh-pages -d docs"
   },
   "keywords": [
@@ -46,12 +40,11 @@
       "url": "https://www.linkedin.com/in/mostofanobi/"
     }
   ],
-  "license": "MIT",
-  "repository": "asif-jalil/scroll-carousel",
+  "repository": "asif-jalil/scroll-carousel-website",
   "bugs": {
-    "url": "https://github.com/asif-jalil/scroll-carousel/issues"
+    "url": "https://github.com/asif-jalil/scroll-carousel-website/issues"
   },
-  "homepage": "https://asif-jalil.github.io/scroll-carousel",
+  "homepage": "https://asif-jalil.github.io/scroll-carousel-website",
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
@@ -66,8 +59,6 @@
     "postcss": "^8.4.18",
     "postcss-loader": "^7.0.1",
     "postcss-preset-env": "^7.8.2",
-    "sass": "^1.55.0",
-    "sass-loader": "^13.1.0",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.2.1",
     "terser-webpack-plugin": "^5.3.6",
@@ -80,9 +71,7 @@
     "clipboard": "^2.0.11",
     "cross-env": "^7.0.3",
     "gh-pages": "^4.0.0",
-    "highlight.js": "^11.6.0",
-    "node-sass": "^7.0.3"
+    "highlight.js": "^11.6.0"
   }
 }
-
 
