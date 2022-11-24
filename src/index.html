@@ -23,14 +23,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <!-- top -->
       <div class="relative z-10 flex items-center justify-between">
-        <a class="text-lg font-bold" href="https://asif-jalil.github.io/scroll-carousel-website">Scroll Carousel</a>
-        <a class="btn__default" target="_blank" href="https://github.com/asif-jalil/scroll-carousel">
-          <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 fill-slate-900">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z">
-            </path>
-          </svg>
-          Github
+        <h1 class="text-lg font-bold">Scroll Carousel</h1>
+        <a target="_blank" href="https://www.npmjs.com/package/scroll-carousel">
+          <img src="assets/img/npm.svg" alt="" class="w-12 h-12">
         </a>
       </div>
       <!-- /top -->
@@ -83,7 +78,7 @@
       </div>
       <!-- /core -->
     </div>
-    <div data-carousel='{"smartSpeed": true, "speed": 12}'>
+    <div data-carousel='{"smartSpeed": true, "speed": 12, "autoplay": true}'>
       <div class="bg-blue-200/5 border border-blue-500 rounded-lg ml-5 p-5">
         <div class="w-96 mr-5 space-y-5">
           <div class="relative w-12 h-12">
@@ -194,8 +189,12 @@
           <!-- /nav -->
           <!-- github -->
           <div class="border-l border-gray-00 ml-6">
-            <a target="_blank" href="https://www.npmjs.com/package/scroll-carousel" class="ml-6 block opacity-80 hover:opacity-100">
-              <img src="assets/img/npm.svg" class="h-5 w-5" alt="">
+            <a class="btn__default ml-5" target="_blank" href="https://github.com/asif-jalil/scroll-carousel">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 fill-slate-900">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z">
+                </path>
+              </svg>
             </a>
           </div>
           <!-- /github -->
@@ -264,7 +263,7 @@
                           clip-rule="evenodd" />
                       </svg>
                       <span class="ml-2 w-0 flex-1 truncate">
-                        un-minified:
+                        extended:
                         <a target="_blank" class="text-indigo-600 hover:text-indigo-500 hover:underline"
                           href="https://github.com/asif-jalil/scroll-carousel/blob/main/dist/scroll.carousel.css">scroll.carousel.css</a>
                       </span>
@@ -309,7 +308,7 @@
                           clip-rule="evenodd" />
                       </svg>
                       <span class="ml-2 w-0 flex-1 truncate">
-                        un-minified:
+                        extended:
                         <a target="_blank" class="text-indigo-600 hover:text-indigo-500 hover:underline"
                           href="https://github.com/asif-jalil/scroll-carousel/blob/main/dist/scroll.carousel.js">scroll.carousel.js</a>
                       </span>
@@ -465,240 +464,308 @@
       <!-- /page-header -->
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
-        <!-- Basic -->
-        <div class="space-y-10">
+        <!-- Basic Example -->
+        <div class="overflow-hidden">
           <!-- Heading -->
-          <div>
-            <div class="pb-5 border-b border-gray-200">
-              <h3 class="text-2xl leading-6 text-gray-900">Basic Example</h3>
-            </div>
-          </div>
+          <h3 class="text-2xl leading-6 text-gray-900 mb-5 pl-2">Basic Example</h3>
           <!-- /Heading -->
+          <div class="border rounded-lg space-y-10 bg-slate-50 py-5">
+            <!-- Slider -->
+            <div class="basic__example-carousel mb-10">
+              <div class="slide__item bg-gray-300/20 border-2 border-gray-300/70"></div>
+              <div class="slide__item bg-red-300/20 border-2 border-red-300/70"></div>
+              <div class="slide__item bg-yellow-200/20 border-2 border-yellow-200/70"></div>
+              <div class="slide__item bg-green-300/20 border-2 border-green-300/70"></div>
+              <div class="slide__item bg-blue-300/20 border-2 border-blue-300/70"></div>
+              <div class="slide__item bg-orange-300/20 border-2 border-orange-300/70"></div>
+              <div class="slide__item bg-lime-200/20 border-2 border-lime-200/70"></div>
+              <div class="slide__item bg-amber-300/20 border-2 border-amber-300/70"></div>
+              <div class="slide__item bg-emerald-300/20 border-2 border-emerald-300/70"></div>
+              <div class="slide__item bg-rose-300/20 border-2 border-rose-300/70"></div>
+              <div class="slide__item bg-sky-300/20 border-2 border-sky-300/70"></div>
+              <div class="slide__item bg-violet-400/20 border-2 border-violet-400/70"></div>
+            </div>
+            <!-- /Slider -->
 
-          <!-- Slider -->
-          <div class="basic__example-carousel">
-            <div class="slide__item bg-gray-300/20 border-2 border-gray-300/70"></div>
-            <div class="slide__item bg-red-300/20 border-2 border-red-300/70"></div>
-            <div class="slide__item bg-yellow-200/20 border-2 border-yellow-200/70"></div>
-            <div class="slide__item bg-green-300/20 border-2 border-green-300/70"></div>
-            <div class="slide__item bg-blue-300/20 border-2 border-blue-300/70"></div>
-            <div class="slide__item bg-orange-300/20 border-2 border-orange-300/70"></div>
-            <div class="slide__item bg-lime-200/20 border-2 border-lime-200/70"></div>
-            <div class="slide__item bg-amber-300/20 border-2 border-amber-300/70"></div>
-            <div class="slide__item bg-emerald-300/20 border-2 border-emerald-300/70"></div>
-            <div class="slide__item bg-rose-300/20 border-2 border-rose-300/70"></div>
-            <div class="slide__item bg-sky-300/20 border-2 border-sky-300/70"></div>
-            <div class="slide__item bg-violet-400/20 border-2 border-violet-400/70"></div>
-          </div>
-          <!-- /Slider -->
+            <!-- code -->
+            <div class="grid md:grid-cols-2 gap-5 px-5">
+              <div class="md:col-span-1 flex flex-col">
+                <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">HTML</h4>
+                <div class="h-full md:col-span-1 relative px-6 bg-white rounded-lg border">
+                  <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                    <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='<div class="my-carousel">
+                        <div class="my-slide"></div>
+                        <div class="my-slide"></div>
+                        <div class="my-slide"></div>
+                      </div>'>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                      </svg>
+                    </button>
+                  </div>
 
-          <!-- code -->
-          <div class="md:grid md:grid-cols-2 md:gap-5">
-            <div class="md:col-span-1 flex flex-col">
-              <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">HTML</h4>
-              <div class="h-full md:col-span-1 relative px-6 bg-slate-50 rounded-lg border mb-5">
-                <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
-                  <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='<div class="my-carousel">
-                      <div class="my-slide">...</div>
-                      <div class="my-slide">...</div>
-                      <div class="my-slide">...</div>
-                    </div>'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
-                    </svg>
-                  </button>
+                  <pre>
+                    <code class="language-html !p-0 bg-transparent">
+                      &lt;div class="my-carousel"&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
                 </div>
+              </div>
+              <div class="md:col-span-1 flex flex-col">
+                <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">Javascript</h4>
+                <div class="h-full relative px-6 bg-white rounded-lg border">
+                  <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                    <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='new ScrollCarousel(".my-carousel")'>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                      </svg>
+                    </button>
+                  </div>
 
-                <pre>
-                  <code class="language-html !p-0 bg-transparent">
-                    &lt;div class="my-carousel"&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;...
-                    &lt;/div&gt;
-                  </code>
-                </pre>
+                  <pre>
+                    <code class="language-javascript !p-0 bg-transparent hljs">
+                      new ScrollCarousel(".my-carousel");
+                    </code>
+                  </pre>
+                </div>
               </div>
             </div>
-            <div class="md:col-span-1 flex flex-col">
-              <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">Javascript</h4>
-              <div class="h-full relative px-6 bg-slate-50 rounded-lg border mb-5">
-                <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
-                  <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='new ScrollCarousel(".my-carousel")'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
-                    </svg>
-                  </button>
-                </div>
-
-                <pre>
-                  <code class="language-javascript !p-0 bg-transparent hljs">
-                    new ScrollCarousel(".my-carousel");
-                  </code>
-                </pre>
-              </div>
-            </div>
+            <!-- /code -->
           </div>
-          <!-- /code -->
         </div>
-        <!-- /Basic -->
+        <!-- /Basic Example -->
         <!-- Data attr -->
-        <div class="space-y-10">
+        <div class="overflow-hidden">
           <!-- Heading -->
-          <div>
-            <div class="pb-5 border-b border-gray-200">
-              <h3 class="text-2xl leading-6 text-gray-900">Using Data Attribute</h3>
-            </div>
-          </div>
+          <h3 class="text-2xl leading-6 text-gray-900 mb-5 pl-2">Data Attribute Example</h3>
           <!-- /Heading -->
+          <div class="border rounded-lg space-y-10 bg-slate-50 py-5">
+            <!-- Slider -->
+            <div data-carousel='{"smartSpeed": true}'>
+              <div class="slide__item bg-gray-300/20 border-2 border-gray-300/70"></div>
+              <div class="slide__item bg-red-300/20 border-2 border-red-300/70"></div>
+              <div class="slide__item bg-yellow-200/20 border-2 border-yellow-200/70"></div>
+              <div class="slide__item bg-green-300/20 border-2 border-green-300/70"></div>
+              <div class="slide__item bg-blue-300/20 border-2 border-blue-300/70"></div>
+              <div class="slide__item bg-orange-300/20 border-2 border-orange-300/70"></div>
+              <div class="slide__item bg-lime-200/20 border-2 border-lime-200/70"></div>
+              <div class="slide__item bg-amber-300/20 border-2 border-amber-300/70"></div>
+              <div class="slide__item bg-emerald-300/20 border-2 border-emerald-300/70"></div>
+              <div class="slide__item bg-rose-300/20 border-2 border-rose-300/70"></div>
+              <div class="slide__item bg-sky-300/20 border-2 border-sky-300/70"></div>
+              <div class="slide__item bg-violet-400/20 border-2 border-violet-400/70"></div>
+            </div>
+            <!-- /Slider -->
 
-          <!-- Slider -->
-          <div data-carousel='{"smartSpeed": true}'>
-            <div class="slide__item bg-gray-300/20 border-2 border-gray-300/70"></div>
-            <div class="slide__item bg-red-300/20 border-2 border-red-300/70"></div>
-            <div class="slide__item bg-yellow-200/20 border-2 border-yellow-200/70"></div>
-            <div class="slide__item bg-green-300/20 border-2 border-green-300/70"></div>
-            <div class="slide__item bg-blue-300/20 border-2 border-blue-300/70"></div>
-            <div class="slide__item bg-orange-300/20 border-2 border-orange-300/70"></div>
-            <div class="slide__item bg-lime-200/20 border-2 border-lime-200/70"></div>
-            <div class="slide__item bg-amber-300/20 border-2 border-amber-300/70"></div>
-            <div class="slide__item bg-emerald-300/20 border-2 border-emerald-300/70"></div>
-            <div class="slide__item bg-rose-300/20 border-2 border-rose-300/70"></div>
-            <div class="slide__item bg-sky-300/20 border-2 border-sky-300/70"></div>
-            <div class="slide__item bg-violet-400/20 border-2 border-violet-400/70"></div>
-          </div>
-          <!-- /Slider -->
+            <!-- code -->
+            <div class="grid md:grid-cols-2 gap-5 px-5">
+              <div class="md:col-span-1 flex flex-col">
+                <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">HTML</h4>
+                <div class="h-full md:col-span-1 relative px-6 bg-white rounded-lg border">
+                  <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                    <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='<div data-carousel=&apos;{"smartSpeed": true}&apos;>
+                        <div class="my-slide"></div>
+                        <div class="my-slide"></div>
+                        <div class="my-slide"></div>
+                      </div>'>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                      </svg>
+                    </button>
+                  </div>
 
-          <!-- code -->
-          <div class="md:grid md:grid-cols-2 md:gap-5">
-            <div class="md:col-span-1 flex flex-col">
-              <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">HTML</h4>
-              <div class="h-full md:col-span-1 relative px-6 bg-slate-50 rounded-lg border mb-5">
-                <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
-                  <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='<div data-carousel=&apos;{"smartSpeed": true}&apos;>
-                      <div class="my-slide">...</div>
-                      <div class="my-slide">...</div>
-                      <div class="my-slide">...</div>
-                    </div>'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
-                    </svg>
-                  </button>
+                  <pre>
+                    <code class="language-html !p-0 bg-transparent">
+                      &lt;div data-carousel='{"smartSpeed": "true"}'&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
                 </div>
-
-                <pre>
-                  <code class="language-html !p-0 bg-transparent">
-                    &lt;div data-carousel='{"smartSpeed": "true"}'&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;...
-                    &lt;/div&gt;
-                  </code>
-                </pre>
+              </div>
+              <div class="md:col-span-1 flex flex-col">
+                <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">Javascript</h4>
+                <div class="h-full px-6 bg-white rounded-lg border">
+                  <pre>
+                    <code class="!p-0 bg-transparent hljs">
+                      // no javascript required
+                    </code>
+                  </pre>
+                </div>
               </div>
             </div>
-            <div class="md:col-span-1 flex flex-col">
-              <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">Javascript</h4>
-              <div class="h-full px-6 bg-slate-50 rounded-lg border mb-5">
-                <pre>
-                  <code class="!p-0 bg-transparent hljs">
-                    // no javascript required
-                  </code>
-                </pre>
-              </div>
-            </div>
+            <!-- /code -->
           </div>
-          <!-- /code -->
         </div>
         <!-- /Data attr -->
         <!-- Example with speed -->
-        <div class="space-y-10">
+        <div class="overflow-hidden">
           <!-- Heading -->
-          <div>
-            <div class="pb-5 border-b border-gray-200">
-              <h3 class="text-2xl leading-6 text-gray-900">Example with speed</h3>
-            </div>
-          </div>
+          <h3 class="text-2xl leading-6 text-gray-900 mb-5 pl-2">Speed Example</h3>
           <!-- /Heading -->
+          <div class="border rounded-lg space-y-10 bg-slate-50 py-5">
+            <!-- Slider -->
+            <div class="speed__example-carousel">
+              <div class="slide__item bg-gray-300/20 border-2 border-gray-300/70"></div>
+              <div class="slide__item bg-red-300/20 border-2 border-red-300/70"></div>
+              <div class="slide__item bg-yellow-200/20 border-2 border-yellow-200/70"></div>
+              <div class="slide__item bg-green-300/20 border-2 border-green-300/70"></div>
+              <div class="slide__item bg-blue-300/20 border-2 border-blue-300/70"></div>
+              <div class="slide__item bg-orange-300/20 border-2 border-orange-300/70"></div>
+              <div class="slide__item bg-lime-200/20 border-2 border-lime-200/70"></div>
+              <div class="slide__item bg-amber-300/20 border-2 border-amber-300/70"></div>
+              <div class="slide__item bg-emerald-300/20 border-2 border-emerald-300/70"></div>
+              <div class="slide__item bg-rose-300/20 border-2 border-rose-300/70"></div>
+              <div class="slide__item bg-sky-300/20 border-2 border-sky-300/70"></div>
+              <div class="slide__item bg-violet-400/20 border-2 border-violet-400/70"></div>
+            </div>
+            <!-- /Slider -->
 
-          <!-- Slider -->
-          <div class="speed__example-carousel">
-            <div class="slide__item bg-gray-300/20 border-2 border-gray-300/70"></div>
-            <div class="slide__item bg-red-300/20 border-2 border-red-300/70"></div>
-            <div class="slide__item bg-yellow-200/20 border-2 border-yellow-200/70"></div>
-            <div class="slide__item bg-green-300/20 border-2 border-green-300/70"></div>
-            <div class="slide__item bg-blue-300/20 border-2 border-blue-300/70"></div>
-            <div class="slide__item bg-orange-300/20 border-2 border-orange-300/70"></div>
-            <div class="slide__item bg-lime-200/20 border-2 border-lime-200/70"></div>
-            <div class="slide__item bg-amber-300/20 border-2 border-amber-300/70"></div>
-            <div class="slide__item bg-emerald-300/20 border-2 border-emerald-300/70"></div>
-            <div class="slide__item bg-rose-300/20 border-2 border-rose-300/70"></div>
-            <div class="slide__item bg-sky-300/20 border-2 border-sky-300/70"></div>
-            <div class="slide__item bg-violet-400/20 border-2 border-violet-400/70"></div>
-          </div>
-          <!-- /Slider -->
+            <!-- code -->
+            <div class="grid md:grid-cols-2 gap-5 px-5">
+              <div class="md:col-span-1 flex flex-col">
+                <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">HTML</h4>
+                <div class="h-full md:col-span-1 relative px-6 bg-white rounded-lg border">
+                  <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                    <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='<div class="my-carousel">
+                        <div class="my-slide"></div>
+                        <div class="my-slide"></div>
+                        <div class="my-slide"></div>
+                      </div>'>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                      </svg>
+                    </button>
+                  </div>
 
-          <!-- code -->
-          <div class="md:grid md:grid-cols-2 md:gap-5">
-            <div class="md:col-span-1 flex flex-col">
-              <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">HTML</h4>
-              <div class="h-full md:col-span-1 relative px-6 bg-slate-50 rounded-lg border mb-5">
-                <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
-                  <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='<div class="my-carousel">
-                      <div class="my-slide">...</div>
-                      <div class="my-slide">...</div>
-                      <div class="my-slide">...</div>
-                    </div>'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
-                    </svg>
-                  </button>
+                  <pre>
+                    <code class="language-html !p-0 bg-transparent">
+                      &lt;div class="my-carousel"&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
                 </div>
+              </div>
+              <div class="md:col-span-1 flex flex-col">
+                <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">Javascript</h4>
+                <div class="h-full relative px-6 bg-white rounded-lg border">
+                  <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                    <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='new ScrollCarousel(".my-carousel", {speed: 8, smartSpeed: true});'>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                      </svg>
+                    </button>
+                  </div>
 
-                <pre>
-                  <code class="language-html !p-0 bg-transparent">
-                    &lt;div class="my-carousel"&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;&lt;div class="my-slide"&gt;...&lt;/div&gt;
-                      &nbsp;&nbsp;...
-                    &lt;/div&gt;
-                  </code>
-                </pre>
+                  <pre>
+                    <code class="language-javascript !p-0 bg-transparent hljs">
+                      new ScrollCarousel(".my-carousel", {
+                        &nbsp;&nbsp;speed: 8,
+                        &nbsp;&nbsp;smartSpeed: true
+                      });
+                    </code>
+                  </pre>
+                </div>
               </div>
             </div>
-            <div class="md:col-span-1 flex flex-col">
-              <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">Javascript</h4>
-              <div class="h-full relative px-6 bg-slate-50 rounded-lg border mb-5">
-                <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
-                  <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='new ScrollCarousel(".my-carousel", {speed: 8, smartSpeed: true});'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
-                    </svg>
-                  </button>
-                </div>
-
-                <pre>
-                  <code class="language-javascript !p-0 bg-transparent hljs">
-                    new ScrollCarousel(".my-carousel", {
-                      &nbsp;&nbsp;speed: 8,
-                      &nbsp;&nbsp;smartSpeed: true
-                    });
-                  </code>
-                </pre>
-              </div>
-            </div>
+            <!-- /code -->
           </div>
-          <!-- /code -->
         </div>
         <!-- /Example with speed -->
+        <!-- Autoplay Example -->
+        <div class="overflow-hidden">
+          <!-- Heading -->
+          <h3 class="text-2xl leading-6 text-gray-900 mb-5 pl-2">Autoplay Example</h3>
+          <!-- /Heading -->
+          <div class="border rounded-lg space-y-10 bg-slate-50 py-5">
+            <!-- Slider -->
+            <div class="autoplay__example-carousel">
+              <div class="slide__item bg-gray-300/20 border-2 border-gray-300/70"></div>
+              <div class="slide__item bg-red-300/20 border-2 border-red-300/70"></div>
+              <div class="slide__item bg-yellow-200/20 border-2 border-yellow-200/70"></div>
+              <div class="slide__item bg-green-300/20 border-2 border-green-300/70"></div>
+              <div class="slide__item bg-blue-300/20 border-2 border-blue-300/70"></div>
+              <div class="slide__item bg-orange-300/20 border-2 border-orange-300/70"></div>
+              <div class="slide__item bg-lime-200/20 border-2 border-lime-200/70"></div>
+              <div class="slide__item bg-amber-300/20 border-2 border-amber-300/70"></div>
+              <div class="slide__item bg-emerald-300/20 border-2 border-emerald-300/70"></div>
+              <div class="slide__item bg-rose-300/20 border-2 border-rose-300/70"></div>
+              <div class="slide__item bg-sky-300/20 border-2 border-sky-300/70"></div>
+              <div class="slide__item bg-violet-400/20 border-2 border-violet-400/70"></div>
+            </div>
+            <!-- /Slider -->
+
+            <!-- code -->
+            <div class="grid md:grid-cols-2 gap-5 px-5">
+              <div class="md:col-span-1 flex flex-col">
+                <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">HTML</h4>
+                <div class="h-full md:col-span-1 relative px-6 bg-white rounded-lg border">
+                  <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                    <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='<div class="my-carousel">
+                        <div class="my-slide"></div>
+                        <div class="my-slide"></div>
+                        <div class="my-slide"></div>
+                      </div>'>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre>
+                    <code class="language-html !p-0 bg-transparent">
+                      &lt;div class="my-carousel"&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                        &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <div class="md:col-span-1 flex flex-col">
+                <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">Javascript</h4>
+                <div class="h-full relative px-6 bg-white rounded-lg border">
+                  <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                    <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='new ScrollCarousel(".my-carousel", {speed: 8, smartSpeed: true, autoPlay: true});'>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre>
+                    <code class="language-javascript !p-0 bg-transparent hljs">
+                      new ScrollCarousel(".my-carousel", {
+                        &nbsp;&nbsp;speed: 8,
+                        &nbsp;&nbsp;smartSpeed: true,
+                        &nbsp;&nbsp;autoPlay: true
+                      });
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+            <!-- /code -->
+          </div>
+        </div>
+        <!-- /Autoplay Example -->
       </div>
     </div>
 
@@ -720,53 +787,198 @@
       </div>
       <!-- /page-header -->
       <!-- content -->
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div class="pb-5 border-b border-gray-200">
-          <h3 class="text-2xl leading-6 text-gray-900">Options</h3>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-32">
+        <div>
+          <div class="pb-5 border-b border-gray-200">
+            <h3 class="text-2xl leading-6 text-gray-900">Options</h3>
+          </div>
+          <div>
+            <dl>
+              <div class="py-5 sm:grid sm:grid-cols-4 sm:gap-4 border-b">
+                <dt class="text-xl text-gray-900">autoPlay</dt>
+                <dd class="mt-5 text-sm text-gray-900 sm:col-span-3 sm:mt-0">
+                  <span class="block mb-2">
+                    Type:
+                    <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-red-500">
+                      Boolean
+                    </code>
+                  </span>
+                  <span class="block">
+                    Default:
+                    <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-slate-700">
+                      false
+                    </code>
+                  </span>
+                  <p class="my-5 text-base max-w-xl">
+                    The option will allow the slides move automatically and still you will have the ability to handle sliding speed on scroll.
+                  </p>
+                </dd>
+              </div>
+              <div class="py-5 sm:grid sm:grid-cols-4 sm:gap-4 border-b">
+                <dt class="text-xl text-gray-900">speed</dt>
+                <dd class="mt-5 text-sm text-gray-900 sm:col-span-3 sm:mt-0">
+                  <span class="block mb-2">
+                    Type:
+                    <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-red-500">
+                      Number
+                    </code>
+                  </span>
+                  <span class="block">
+                    Default:
+                    <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-slate-700">
+                      7
+                    </code>
+                  </span>
+                  <p class="my-5 text-base max-w-xl">
+                    The value given is actually how fast you want to move on scroll. It needs to be greater than 0.
+                  </p>
+                </dd>
+              </div>
+              <div class="py-5 sm:grid sm:grid-cols-4 sm:gap-4 border-b">
+                <dt class="text-xl text-gray-900">smartSpeed</dt>
+                <dd class="mt-5 text-sm text-gray-900 sm:col-span-3 sm:mt-0">
+                  <span class="block mb-2">
+                    Type:
+                    <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-red-500">
+                      Boolean
+                    </code>
+                  </span>
+                  <span class="block">
+                    Default:
+                    <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-slate-700">
+                      false
+                    </code>
+                  </span>
+                  <p class="mt-5 text-base max-w-xl">
+                    To calculate the speed more smartly on displacement and time difference.
+                  </p>
+                </dd>
+              </div>
+              <div class="py-5 sm:grid sm:grid-cols-4 sm:gap-4">
+                <dt class="text-xl text-gray-900">margin</dt>
+                <dd class="mt-5 text-sm text-gray-900 sm:col-span-3 sm:mt-0">
+                  <span class="block mb-2">
+                    Type:
+                    <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-red-500">
+                      Number
+                    </code>
+                  </span>
+                  <span class="block">
+                    Default:
+                    <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-slate-700">
+                      10
+                    </code>
+                  </span>
+                  <p class="mt-5 text-base max-w-xl">
+                    To make gap between to slides.
+                  </p>
+                </dd>
+              </div>
+            </dl>
+          </div>
         </div>
         <div>
-          <dl>
-            <div class="py-5 sm:grid sm:grid-cols-4 sm:gap-4 border-b">
-              <dt class="text-xl text-gray-900">speed</dt>
-              <dd class="mt-5 text-sm text-gray-900 sm:col-span-3 sm:mt-0">
-                <span class="block mb-2">
-                  Type:
-                  <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-red-500">
-                    Number
-                  </code>
-                </span>
-                <span class="block">
-                  Default:
-                  <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-slate-700">
-                    7
-                  </code>
-                </span>
-                <p class="my-5 text-base">
-                  The value given is actually how fast you want to move on scroll. It needs to be greater than 0.
+          <div class="pb-5 border-b border-gray-200">
+            <h3 class="text-2xl leading-6 text-gray-900">Methods</h3>
+          </div>
+          <div>
+            <dl>
+              <!-- destroy Example -->
+              <div class="overflow-hidden py-10">
+                <!-- Heading -->
+                <h3 class="text-2xl leading-6 text-gray-900 mb-5">destroy()</h3>
+                <p class="mb-5 text-base max-w-xl">
+                  Remove ScrollCarousel functionality completely. destroy will return the element back to its pre-initialized state.
                 </p>
-              </dd>
-            </div>
-            <div class="py-5 sm:grid sm:grid-cols-4 sm:gap-4">
-              <dt class="text-xl text-gray-900">smartSpeed</dt>
-              <dd class="mt-5 text-sm text-gray-900 sm:col-span-3 sm:mt-0">
-                <span class="block mb-2">
-                  Type:
-                  <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-red-500">
-                    Boolean
-                  </code>
-                </span>
-                <span class="block">
-                  Default:
-                  <code class="ml-2 whitespace-nowrap rounded bg-slate-100 py-0.5 px-2 text-xs font-mono text-slate-700">
-                    false
-                  </code>
-                </span>
-                <p class="mt-5 text-base">
-                  To calculate the speed more smartly on displacement and time difference.
-                </p>
-              </dd>
-            </div>
-          </dl>
+                <!-- /Heading -->
+                <div class="border rounded-lg space-y-10 bg-slate-50 py-5">
+                  <!-- destroy -->
+                  <button type="button" id="destroy-button"
+                    class="flex gap-2 items-center px-3 py-1.5 text-xs border border-transparent font-medium border-red-500 rounded text-red-500 bg-red-50 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ml-5">
+                    <span class="text-2xl leading-none translate-y-[-3px]">&times;</span> <span>Destroy Carousel</span>
+                  </button>
+                  <!-- destroy -->
+                  <!-- Slider -->
+                  <div class="destroy__example-carousel flex flex-wrap gap-5">
+                    <div class="slide__item bg-gray-300/20 border-2 border-gray-300/70"></div>
+                    <div class="slide__item bg-red-300/20 border-2 border-red-300/70"></div>
+                    <div class="slide__item bg-yellow-200/20 border-2 border-yellow-200/70"></div>
+                    <div class="slide__item bg-green-300/20 border-2 border-green-300/70"></div>
+                    <div class="slide__item bg-blue-300/20 border-2 border-blue-300/70"></div>
+                    <div class="slide__item bg-orange-300/20 border-2 border-orange-300/70"></div>
+                    <div class="slide__item bg-lime-200/20 border-2 border-lime-200/70"></div>
+                    <div class="slide__item bg-amber-300/20 border-2 border-amber-300/70"></div>
+                    <div class="slide__item bg-emerald-300/20 border-2 border-emerald-300/70"></div>
+                    <div class="slide__item bg-rose-300/20 border-2 border-rose-300/70"></div>
+                    <div class="slide__item bg-sky-300/20 border-2 border-sky-300/70"></div>
+                    <div class="slide__item bg-violet-400/20 border-2 border-violet-400/70"></div>
+                  </div>
+                  <!-- /Slider -->
+
+                  <!-- code -->
+                  <div class="grid md:grid-cols-2 gap-5 px-5">
+                    <div class="md:col-span-1 flex flex-col">
+                      <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">HTML</h4>
+                      <div class="h-full md:col-span-1 relative px-6 bg-white rounded-lg border">
+                        <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                          <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='<div class="my-carousel">
+                              <div class="my-slide"></div>
+                              <div class="my-slide"></div>
+                              <div class="my-slide"></div>
+                            </div>'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                            </svg>
+                          </button>
+                        </div>
+
+                        <pre>
+                          <code class="language-html !p-0 bg-transparent">
+                            &lt;div class="my-carousel"&gt;
+                              &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                              &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                              &nbsp;&nbsp;&lt;div class="my-slide"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="md:col-span-1 flex flex-col">
+                      <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">Javascript</h4>
+                      <div class="h-full relative px-6 bg-white rounded-lg border">
+                        <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                          <button type="button" class="text-slate-500 hover:text-slate-400"
+                            data-clipboard-text='const scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8, smartSpeed: true, autoPlay: true}); document.querySelector("#button").addEventListener("click", function () {scrollCarousel.destroy();});'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                            </svg>
+                          </button>
+                        </div>
+
+                        <pre>
+                          <code class="language-javascript !p-0 bg-transparent hljs">
+                            const scrollCarousel = new ScrollCarousel(".my-carousel", {
+                              &nbsp;&nbsp;speed: 8,
+                              &nbsp;&nbsp;smartSpeed: true,
+                              &nbsp;&nbsp;autoPlay: true
+                            });
+
+                            document.querySelector('#button').addEventListener('click', function () {
+                              &nbsp;&nbsp;scrollCarousel.destroy();
+                            });
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /code -->
+                </div>
+              </div>
+              <!-- /destroy Example -->
+            </dl>
+          </div>
         </div>
       </div>
 

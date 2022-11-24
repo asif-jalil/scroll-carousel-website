@@ -18,9 +18,22 @@ const scrollCarouselInit = () => {
     speed: 8,
     smartSpeed: true
   });
+  new ScrollCarousel('.autoplay__example-carousel', {
+    speed: 8,
+    smartSpeed: true,
+    autoPlay: true
+  });
+  const destroyExampleCarousel = new ScrollCarousel('.destroy__example-carousel', {
+    speed: 8,
+    smartSpeed: true,
+    autoPlay: true
+  });
+  document.querySelector('#destroy-button').addEventListener('click', function () {
+    destroyExampleCarousel.destroy();
+  });
 };
-const clipboardInit = () => new Clipboard('[data-clipboard-text]');
 
+const clipboardInit = () => new Clipboard('[data-clipboard-text]');
 
 docReady(scrollCarouselInit);
 docReady(highlightjsInit);
