@@ -19,14 +19,12 @@ const scrollCarouselInit = () => {
     smartSpeed: true
   });
   new ScrollCarousel('.autoplay__example-carousel', {
-    speed: 8,
-    smartSpeed: true,
-    autoPlay: true
+    autoplay: true
   });
   const destroyExampleCarousel = new ScrollCarousel('.destroy__example-carousel', {
     speed: 8,
     smartSpeed: true,
-    autoPlay: true
+    autoplay: true
   });
   document.querySelector('#destroy-button').addEventListener('click', function () {
     destroyExampleCarousel.destroy();
