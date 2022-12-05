@@ -14,22 +14,28 @@ const docReady = fn => {
 const scrollCarouselInit = () => {
   new ScrollCarousel('.basic__example-carousel');
 
-  new ScrollCarousel('.speed__example-carousel', {
-    speed: 8,
-    smartSpeed: true
-  });
   new ScrollCarousel('.autoplay__example-carousel', {
+    autoplay: true
+  });
+  new ScrollCarousel('.direction__example-carousel', {
+    autoplay: true,
+    direction: 'ltr'
+  });
+  new ScrollCarousel('.slideSelector__example-carousel', {
+    autoplay: true,
+    slideSelector: '.slide__item'
+  });
+  let triggerExampleCarousel = new ScrollCarousel('.trigger__example-carousel', {
     speed: 8,
     smartSpeed: true,
-    autoPlay: true
+    autoplay: true
   });
-  const destroyExampleCarousel = new ScrollCarousel('.destroy__example-carousel', {
-    speed: 8,
-    smartSpeed: true,
-    autoPlay: true
-  });
-  document.querySelector('#destroy-button').addEventListener('click', function () {
-    destroyExampleCarousel.destroy();
+  document.querySelector('#trigger-button').addEventListener('click', function () {
+    if (triggerExampleCarousel.isActive) {
+      triggerExampleCarousel.destroy();
+    } else {
+      triggerExampleCarousel = triggerExampleCarousel.reinit();
+    }
   });
 };
 
@@ -39,4 +45,3 @@ docReady(scrollCarouselInit);
 docReady(highlightjsInit);
 docReady(tooltipInit);
 docReady(clipboardInit);
-
