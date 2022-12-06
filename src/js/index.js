@@ -18,11 +18,10 @@ const scrollCarouselInit = () => {
     autoplay: true
   });
   new ScrollCarousel('.direction__example-carousel', {
-    autoplay: true,
+    smartSpeed: true,
     direction: 'ltr'
   });
   new ScrollCarousel('.slideSelector__example-carousel', {
-    autoplay: true,
     slideSelector: '.slide__item'
   });
   let triggerExampleCarousel = new ScrollCarousel('.trigger__example-carousel', {
