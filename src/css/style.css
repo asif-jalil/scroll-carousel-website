@@ -28,6 +28,10 @@
   }
 }
 
+.progress-bar {
+  transition: width 300ms linear;
+}
+
 /* Tooltip text */
 .tooltip::after {
   visibility: hidden;
@@ -68,4 +72,3 @@
   visibility: visible;
   opacity: 1;
 }
-

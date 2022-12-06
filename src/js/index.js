@@ -19,7 +19,8 @@ const scrollCarouselInit = () => {
   });
   new ScrollCarousel('.direction__example-carousel', {
     smartSpeed: true,
-    direction: 'ltr'
+    direction: 'ltr',
+    autoplay: true
   });
   new ScrollCarousel('.slideSelector__example-carousel', {
     slideSelector: '.slide__item'
@@ -36,6 +37,31 @@ const scrollCarouselInit = () => {
       triggerExampleCarousel = triggerExampleCarousel.reinit();
     }
   });
+  let eventScrollCarousel = new ScrollCarousel('.events__example-carousel', {
+    speed: 8,
+    autoplay: true,
+    smartSpeed: true,
+    on: {
+      destroy: function () {
+        alert('Destroyed');
+      },
+      scroll: function (progress) {
+        progressBar.style = `width: ${Math.ceil(progress)}%`;
+        progressAmount.innerText = `${Math.ceil(progress)}%`;
+      }
+    }
+  });
+
+  document.querySelector('#destroy-button').addEventListener('click', function () {
+    if (eventScrollCarousel.isActive) {
+      eventScrollCarousel.destroy();
+    } else {
+      eventScrollCarousel = eventScrollCarousel.reinit();
+    }
+  });
+
+  const progressBar = document.querySelector('.progress-bar');
+  const progressAmount = document.querySelector('.progress');
 };
 
 const clipboardInit = () => new Clipboard('[data-clipboard-text]');

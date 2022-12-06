@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-carousel/dist/scroll.carousel.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/scroll-carousel@1.2.0/dist/scroll.carousel.min.css" />
   <title>Scroll Carousel</title>
 </head>
 
@@ -78,7 +78,7 @@
       </div>
       <!-- /core -->
     </div>
-    <div data-carousel='{"smartSpeed": true, "speed": 8, "autoplay": true}'>
+    <div data-carousel='{"smartSpeed": true, "speed": 6, "autoplay": true}'>
       <div class="bg-blue-200/5 border border-blue-500 rounded-lg ml-5 p-5">
         <div class="w-96 mr-5 space-y-5">
           <div class="relative w-12 h-12">
@@ -805,6 +805,7 @@
       <!-- /page-header -->
       <!-- content -->
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-32">
+        <!-- options -->
         <div>
           <div class="pb-5 border-b border-gray-200">
             <h3 class="text-2xl leading-6 text-gray-900">Options</h3>
@@ -954,6 +955,8 @@
             </dl>
           </div>
         </div>
+        <!-- /options -->
+        <!-- methods -->
         <div>
           <div class="pb-5 border-b border-gray-200">
             <h3 class="text-2xl leading-6 text-gray-900">Methods</h3>
@@ -1076,6 +1079,167 @@
             </dl>
           </div>
         </div>
+        <!-- /methods -->
+        <!-- events -->
+        <div>
+          <div class="pb-3 mb-3 border-b border-gray-200">
+            <h3 class="text-2xl leading-6 text-gray-900">Events</h3>
+          </div>
+          <p class="max-w-xl">Scroll Carousel offers events in key areas of the code. This gives you the ability to listen for any changes and perform your own actions.</p>
+          <div>
+            <dl>
+              <!-- destroy Example -->
+              <div class="overflow-hidden py-10">
+                <div class="border rounded-lg space-y-10 bg-slate-50 py-5">
+                  <div class="space-y-5">
+
+                    <!-- trigger -->
+                    <button type="button" id="destroy-button"
+                      class="flex gap-2 items-center px-3 py-1.5 text-sm border border-transparent font-medium border-amber-500 rounded text-amber-500 bg-amber-50 hover:bg-amber-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 ml-5">
+                      <span class="text-2xl leading-none translate-y-[-3px]">&olarr;</span> <span>Destroy/Reinit</span>
+                    </button>
+                    <!-- trigger -->
+                    <!-- Slider -->
+                    <div class="events__example-carousel flex flex-wrap gap-5">
+                      <div class="slide__item flex items-center justify-center bg-gray-300/20 border-2 border-gray-300/70">01</div>
+                      <div class="slide__item flex items-center justify-center bg-red-300/20 border-2 border-red-300/70">02</div>
+                      <div class="slide__item flex items-center justify-center bg-yellow-200/20 border-2 border-yellow-200/70">03</div>
+                      <div class="slide__item flex items-center justify-center bg-green-300/20 border-2 border-green-300/70">04</div>
+                      <div class="slide__item flex items-center justify-center bg-blue-300/20 border-2 border-blue-300/70">05</div>
+                      <div class="slide__item flex items-center justify-center bg-orange-300/20 border-2 border-orange-300/70">06</div>
+                      <div class="slide__item flex items-center justify-center bg-lime-200/20 border-2 border-lime-200/70">07</div>
+                      <div class="slide__item flex items-center justify-center bg-amber-300/20 border-2 border-amber-300/70">08</div>
+                      <div class="slide__item flex items-center justify-center bg-emerald-300/20 border-2 border-emerald-300/70">09</div>
+                      <div class="slide__item flex items-center justify-center bg-rose-300/20 border-2 border-rose-300/70">10</div>
+                      <div class="slide__item flex items-center justify-center bg-sky-300/20 border-2 border-sky-300/70">11</div>
+                      <div class="slide__item flex items-center justify-center bg-violet-400/20 border-2 border-violet-400/70">12</div>
+                    </div>
+                    <!-- /Slider -->
+  
+                    <!-- slide progress -->
+                    <div class="px-5">
+                      <h4 class="relative text-lg text-gray-700 progress">0%</h4>
+                      <div class="relative overflow-hidden w-full h-3 border bg-white rounded-full">
+                        <div class="absolute left-0 top-0 bottom-0 progress-bar bg-indigo-500 -z-0" style="width: 0%;">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- slide progress -->
+                  </div>
+
+                  <!-- code -->
+                  <div class="px-5 space-y-10 mt-10">
+                    <div>
+                      <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">ready</h4>
+                      <div class="h-full relative px-6 bg-white rounded-lg border">
+                        <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                          <button type="button" class="text-slate-500 hover:text-slate-400"
+                            data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
+                              ready: function () {
+                                console.log("Be ready");
+                              }
+                            }
+                          });'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                            </svg>
+                          </button>
+                        </div>
+  
+                        <pre>
+                          <code class="language-javascript !p-0 bg-transparent hljs">
+                            let scrollCarousel = new ScrollCarousel(".my-carousel", {
+                              &nbsp;&nbsp;speed: 8,
+                              &nbsp;&nbsp;smartSpeed: true,
+                              &nbsp;&nbsp;autoplay: true,
+                              &nbsp;&nbsp;on: {
+                              &nbsp;&nbsp;&nbsp;&nbsp;ready: function () {
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Be ready");
+                              &nbsp;&nbsp;&nbsp;&nbsp;}
+                              &nbsp;&nbsp;}
+                            });
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">destroy</h4>
+                      <div class="h-full relative px-6 bg-white rounded-lg border">
+                        <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                          <button type="button" class="text-slate-500 hover:text-slate-400"
+                            data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
+                              destroy: function () {
+                                console.log("Destoyed");
+                              }
+                            }
+                          });'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                            </svg>
+                          </button>
+                        </div>
+  
+                        <pre>
+                          <code class="language-javascript !p-0 bg-transparent hljs">
+                            let scrollCarousel = new ScrollCarousel(".my-carousel", {
+                              &nbsp;&nbsp;speed: 8,
+                              &nbsp;&nbsp;smartSpeed: true,
+                              &nbsp;&nbsp;autoplay: true,
+                              &nbsp;&nbsp;on: {
+                              &nbsp;&nbsp;&nbsp;&nbsp;destroy: function () {
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Destroyed");
+                              &nbsp;&nbsp;&nbsp;&nbsp;}
+                              &nbsp;&nbsp;}
+                            });
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">move</h4>
+                      <div class="h-full relative px-6 bg-white rounded-lg border">
+                        <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
+                          <button type="button" class="text-slate-500 hover:text-slate-400"
+                            data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
+                              scroll: function () {
+                                console.log("Scrolling");
+                              }
+                            }
+                          });'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-7 h-7">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                            </svg>
+                          </button>
+                        </div>
+  
+                        <pre>
+                          <code class="language-javascript !p-0 bg-transparent hljs">
+                            let scrollCarousel = new ScrollCarousel(".my-carousel", {
+                              &nbsp;&nbsp;speed: 8,
+                              &nbsp;&nbsp;smartSpeed: true,
+                              &nbsp;&nbsp;autoplay: true,
+                              &nbsp;&nbsp;on: {
+                              &nbsp;&nbsp;&nbsp;&nbsp;scroll: function () {
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Scrolling");
+                              &nbsp;&nbsp;&nbsp;&nbsp;}
+                              &nbsp;&nbsp;}
+                            });
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /code -->
+                </div>
+              </div>
+              <!-- /destroy Example -->
+            </dl>
+          </div>
+        </div>
+        <!-- /events -->
       </div>
 
       <!-- /content -->
@@ -1096,7 +1260,7 @@
   <!-- /footer -->
 
   <!-- script -->
-  <script src="https://cdn.jsdelivr.net/npm/scroll-carousel/dist/scroll.carousel.min.js"></script>
+  <script src="https://unpkg.com/scroll-carousel@1.2.0/dist/scroll.carousel.js"></script>
 </body>
 
 </html>
