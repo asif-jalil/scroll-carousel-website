@@ -45,7 +45,7 @@ const scrollCarouselInit = () => {
       destroy: function () {
         alert('Destroyed');
       },
-      scroll: function (progress) {
+      move: function (progress) {
         progressBar.style = `width: ${Math.ceil(progress)}%`;
         progressAmount.innerText = `${Math.ceil(progress)}%`;
       }
@@ -70,3 +70,4 @@ docReady(scrollCarouselInit);
 docReady(highlightjsInit);
 docReady(tooltipInit);
 docReady(clipboardInit);
+

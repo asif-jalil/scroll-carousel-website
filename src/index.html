@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/scroll-carousel@1.2.0/dist/scroll.carousel.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/scroll-carousel@1.2.1/dist/scroll.carousel.min.css" />
   <title>Scroll Carousel</title>
 </head>
 
@@ -1115,7 +1115,7 @@
                       <div class="slide__item flex items-center justify-center bg-violet-400/20 border-2 border-violet-400/70">12</div>
                     </div>
                     <!-- /Slider -->
-  
+
                     <!-- slide progress -->
                     <div class="px-5">
                       <h4 class="relative text-lg text-gray-700 progress">0%</h4>
@@ -1133,8 +1133,7 @@
                       <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">ready</h4>
                       <div class="h-full relative px-6 bg-white rounded-lg border">
                         <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
-                          <button type="button" class="text-slate-500 hover:text-slate-400"
-                            data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
+                          <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
                               ready: function () {
                                 console.log("Be ready");
                               }
@@ -1146,7 +1145,7 @@
                             </svg>
                           </button>
                         </div>
-  
+
                         <pre>
                           <code class="language-javascript !p-0 bg-transparent hljs">
                             let scrollCarousel = new ScrollCarousel(".my-carousel", {
@@ -1167,8 +1166,7 @@
                       <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">destroy</h4>
                       <div class="h-full relative px-6 bg-white rounded-lg border">
                         <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
-                          <button type="button" class="text-slate-500 hover:text-slate-400"
-                            data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
+                          <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
                               destroy: function () {
                                 console.log("Destoyed");
                               }
@@ -1180,7 +1178,7 @@
                             </svg>
                           </button>
                         </div>
-  
+
                         <pre>
                           <code class="language-javascript !p-0 bg-transparent hljs">
                             let scrollCarousel = new ScrollCarousel(".my-carousel", {
@@ -1201,9 +1199,8 @@
                       <h4 class="text-lg leading-6 text-gray-800 mb-3 pl-2">move</h4>
                       <div class="h-full relative px-6 bg-white rounded-lg border">
                         <div class="tooltip absolute z-10 top-2 right-2" data-tooltip="Copy">
-                          <button type="button" class="text-slate-500 hover:text-slate-400"
-                            data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
-                              scroll: function () {
+                          <button type="button" class="text-slate-500 hover:text-slate-400" data-clipboard-text='let scrollCarousel = new ScrollCarousel(".my-carousel", {speed: 8,smartSpeed: true,autoplay: true,on: {
+                              move: function () {
                                 console.log("Scrolling");
                               }
                             }
@@ -1214,7 +1211,7 @@
                             </svg>
                           </button>
                         </div>
-  
+
                         <pre>
                           <code class="language-javascript !p-0 bg-transparent hljs">
                             let scrollCarousel = new ScrollCarousel(".my-carousel", {
@@ -1222,7 +1219,7 @@
                               &nbsp;&nbsp;smartSpeed: true,
                               &nbsp;&nbsp;autoplay: true,
                               &nbsp;&nbsp;on: {
-                              &nbsp;&nbsp;&nbsp;&nbsp;scroll: function () {
+                              &nbsp;&nbsp;&nbsp;&nbsp;move: function () {
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Scrolling");
                               &nbsp;&nbsp;&nbsp;&nbsp;}
                               &nbsp;&nbsp;}
@@ -1260,7 +1257,7 @@
   <!-- /footer -->
 
   <!-- script -->
-  <script src="https://unpkg.com/scroll-carousel@1.2.0/dist/scroll.carousel.js"></script>
+  <script src="https://unpkg.com/scroll-carousel@1.2.1/dist/scroll.carousel.js"></script>
 </body>
 
 </html>
