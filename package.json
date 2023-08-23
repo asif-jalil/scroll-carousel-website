@@ -9,7 +9,8 @@
     "start:serve": "webpack serve --config webpack.config.js",
     "start:watch": "webpack --watch --config webpack.config.js",
     "build:debug": "webpack --config webpack.config.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "clean": "rimraf dist",
+    "build:prod": "npm run clean & cross-env NODE_ENV=production webpack --config webpack.config.js",
     "live": "gh-pages -d dist"
   },
   "keywords": [
@@ -59,6 +60,7 @@
     "postcss": "^8.4.18",
     "postcss-loader": "^7.0.1",
     "postcss-preset-env": "^7.8.2",
+    "rimraf": "^5.0.1",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.2.1",
     "terser-webpack-plugin": "^5.3.6",
